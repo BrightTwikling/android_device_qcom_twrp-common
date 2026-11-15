@@ -13,7 +13,6 @@ PRODUCT_PACKAGES += \
     resize2fs.recovery
 
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0.recovery \
     ld-android.recovery \
     libandroid_runtime_lazy.recovery \
     libc.recovery \
@@ -33,9 +32,6 @@ PRODUCT_PACKAGES += \
     libmdnssd.recovery \
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0.recovery \
-    android.hardware.boot@1.1.recovery \
-    android.hardware.boot@1.2.recovery \
     libapexsupport.recovery \
     libasyncio.recovery \
     libinit_recovery \
@@ -75,7 +71,7 @@ PRODUCT_PACKAGES += \
     libpng.recovery \
     liblog.recovery \
     libstdc++.recovery \
-    libtwrpminui.recovery \
+#    libtwrpminui.recovery \
     libminadbd.recovery \
     libz.recovery \
     libtwrpdigest.recovery \
