@@ -1,0 +1,49 @@
+//
+// Qualcomm decryption files
+//
+
+prebuilt_root {
+    name: "qcom_decrypt_init_rc",
+    src: "crypto/init.recovery.qcom_decrypt.rc",
+    filename: "init.recovery.qcom_decrypt.rc",
+    install_in_root: true,
+}
+
+prebuilt_root {
+    name: "qcom_decrypt_fbe_init_rc",
+    src: "crypto_fbe/init.recovery.qcom_decrypt.fbe.rc",
+    filename: "init.recovery.qcom_decrypt.fbe.rc",
+    install_in_root: true,
+}
+
+prebuilt_root {
+    name: "qcom_decrypt_prepdecrypt",
+    src: "crypto/system/bin/prepdecrypt.sh",
+    filename: "prepdecrypt.sh",
+    relative_install_path: "system/bin",
+    install_in_root: true,
+}
+
+//
+// Required modules
+//
+
+phony {
+    name: "qcom_decrypt",
+    required: [
+        "relink_binaries",
+        "relink_libraries",
+        "resetprop",
+        "twrp_ramdisk",
+        "qcom_decrypt_init_rc",
+        "qcom_decrypt_prepdecrypt",
+    ],
+}
+
+phony {
+    name: "qcom_decrypt_fbe",
+    required: [
+        "qcom_decrypt",
+        "qcom_decrypt_fbe_init_rc",
+    ],
+}
