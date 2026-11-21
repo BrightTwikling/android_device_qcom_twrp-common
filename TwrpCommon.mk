@@ -216,7 +216,6 @@ PRODUCT_PACKAGES += \
 endif
 ifneq ($(TW_INCLUDE_LPDUMP),)
 PRODUCT_PACKAGES += \
-    bootctl.recovery \
     lpdump.recovery \
     lpdumpd.recovery \
     liblpdump.recovery \
