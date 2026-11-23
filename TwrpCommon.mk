@@ -70,9 +70,11 @@ PRODUCT_PACKAGES += \
     libext2_blkid.recovery \
     libpng.recovery \
     liblog.recovery \
-    libstdc++.recovery \
-#    libtwrpminui.recovery \
-    libminadbd.recovery \
+    libstdc++.recovery
+
+PRODUCT_PACKAGES += \
+    libtwrpminui.recovery \
+    libminadbd_services \
     libz.recovery \
     libtwrpdigest.recovery \
     libblkid.recovery \
