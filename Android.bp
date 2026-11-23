@@ -16,12 +16,12 @@ prebuilt_root {
     install_in_root: true,
 }
 
-prebuilt_root {
+prebuilt_etc {
     name: "qcom_decrypt_prepdecrypt",
     src: "crypto/system/bin/prepdecrypt.sh",
     filename: "prepdecrypt.sh",
-    relative_install_path: "system/bin",
-    install_in_root: true,
+    sub_dir: "system/bin",
+    recovery: true,
 }
 
 //
