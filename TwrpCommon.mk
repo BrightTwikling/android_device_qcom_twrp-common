@@ -165,7 +165,7 @@ PRODUCT_PACKAGES += \
     libaconfig_storage_read_api_cc.recovery \
     server_configurable_flags.recovery \
     libincfs.recovery \
-    android.hardware.health.storage@1.0.recovery
+    android.hardware.health.storage@1.0-service.recovery
     libhardware_legacy.recovery \
     android.system.suspend@1.0.recovery \
     fscryptpolicyget.recovery
@@ -187,12 +187,12 @@ endif
 PRODUCT_PACKAGES += \
     libwifikeystorehal.recovery \
     android.hardware.weaver.recovery \
-    android.hardware.confirmationui@1.0.recovery
+    android.hardware.confirmationui@1.0-service.recovery
 
 PRODUCT_PACKAGES += \
    libsoftkeymaster.recovery \
-   android.hardware.keymaster@4.0.recovery \
-   android.hardware.keymaster@4.1.recovery \
+   android.hardware.keymaster@4.0-service.recovery \
+   android.hardware.keymaster@4.1-service.recovery \
    libkeymaster4support.recovery \
    libkeymaster4_1support.recovery \
    libutilscallstack.recovery \
