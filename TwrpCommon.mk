@@ -313,27 +313,6 @@ PRODUCT_PACKAGES += \
     libncurses.recovery
 endif
 
-ifeq ($(call twrp_scalar,$(TW_USE_TOOLBOX)), true)
-   include $(CLEAR_VARS)
-   LOCAL_MODULE := mkshrc_twrp
-   LOCAL_MODULE_STEM := mkshrc
-   LOCAL_MODULE_TAGS := optional
-   LOCAL_MODULE_CLASS := ETC
-   LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/system/etc
-   LOCAL_SRC_FILES := $(LOCAL_MODULE)
-   include $(BUILD_PREBUILT)
-endif
-
-ifeq ($(call twrp_scalar,$(TW_INCLUDE_7ZA)), true)
-    include $(CLEAR_VARS)
-    LOCAL_MODULE := 7za
-    LOCAL_MODULE_TAGS := optional
-    LOCAL_MODULE_CLASS := EXECUTABLES
-    LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/system/bin
-    LOCAL_SRC_FILES := $(LOCAL_MODULE)
-    include $(BUILD_PREBUILT)
-endif
-
 ifneq (,$(filter true,$(call twrp_scalar,$(TW_INCLUDE_REPACKTOOLS)) $(call twrp_scalar,$(TW_INCLUDE_RESETPROP)) $(call twrp_scalar,$(TW_INCLUDE_LIBRESETPROP))))
     ifeq ($(wildcard external/magisk-prebuilt/prebuilt/Android.bp),)
         $(warning Magisk prebuilt tools not found!)

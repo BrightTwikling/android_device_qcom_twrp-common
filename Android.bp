@@ -24,6 +24,21 @@ prebuilt_etc {
     recovery: true,
 }
 
+cc_prebuilt_binary {
+    name: "7za",
+    srcs: ["7za"],
+    recovery: true,
+    relative_install_path: "system/bin",
+}
+
+prebuilt_etc {
+    name: "mkshrc_twrp",
+    src: "mkshrc_twrp",
+    filename: "mkshrc",
+    sub_dir: "system/etc",
+    recovery: true,
+}
+
 //
 // Required modules
 //
@@ -31,12 +46,11 @@ prebuilt_etc {
 phony {
     name: "qcom_decrypt",
     required: [
-        "relink_binaries",
-        "relink_libraries",
         "resetprop",
-        "twrp_ramdisk",
+        "7za",
         "qcom_decrypt_init_rc",
         "qcom_decrypt_prepdecrypt",
+        "mkshrc_twrp",
     ],
 }
 
